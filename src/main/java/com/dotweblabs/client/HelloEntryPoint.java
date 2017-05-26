@@ -27,7 +27,13 @@ import com.google.gwt.core.client.EntryPoint;
  * @version 0-SNAPSHOT
  */
 public class HelloEntryPoint implements EntryPoint {
+
     @Override
     public void onModuleLoad() {
+        jsLog("GWT Entrypoint has loaded now...");
     }
+
+    public native void jsLog(String msg) /*-{
+        console.log(msg);
+	}-*/;
 }
